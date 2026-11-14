@@ -1,0 +1,84 @@
+:root{--g1:#0f5c3a;--g2:#1f7a4d;--g3:#e3f0e7;--amber:#f5a524;--bg:#eef3ee;--card:#fff;--ink:#14281d;--mut:#62776a;--red:#c0392b}
+*{box-sizing:border-box;margin:0;-webkit-tap-highlight-color:transparent}
+html,body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:17px;line-height:1.4}
+body{padding-bottom:calc(90px + env(safe-area-inset-bottom,0px))}
+#app{max-width:520px;margin:0 auto}
+button,select,input{font:inherit;color:inherit}
+h2{font-size:1.45rem}h3{font-size:1.15rem;margin:22px 16px 10px}h4{margin:16px 0 4px}
+.muted,.small{color:var(--mut)}.small{font-size:.88rem;margin-top:8px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:12px}
+
+/* splash */
+#splash{position:fixed;inset:0;z-index:50;background:linear-gradient(160deg,var(--g1),#0a3d27);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;transition:opacity .5s,visibility .5s}
+#splash.hide{opacity:0;visibility:hidden}
+#splash small{position:absolute;bottom:calc(36px + env(safe-area-inset-bottom,0px));color:#ffd98a;font-size:1rem}
+.logo{font-size:64px;background:#fff2;border-radius:28px;width:104px;height:104px;display:grid;place-items:center;margin-bottom:8px}
+.logo.sm{width:72px;height:72px;font-size:40px;background:var(--g3);margin:0 auto 8px}
+
+/* tabs */
+.tab{display:none}.tab.on{display:block}
+.hero{background:linear-gradient(170deg,var(--g1),var(--g2));color:#fff;padding:calc(18px + env(safe-area-inset-top,0px)) 16px 22px;border-radius:0 0 28px 28px}
+.hero p{opacity:.85;font-size:.9rem}
+.avatar{width:48px;height:48px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:28px}
+.sel{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.sel label{font-size:.8rem;opacity:.95}
+.sel select{display:block;width:100%;margin-top:4px;padding:12px;border-radius:14px;border:0;background:#fff;color:var(--ink);font-size:1rem}
+.bar{background:var(--g1);color:#fff;padding:calc(18px + env(safe-area-inset-top,0px)) 16px 18px;border-radius:0 0 28px 28px;margin-bottom:14px}
+
+/* cards */
+.card{background:var(--card);border-radius:22px;padding:16px;margin:14px 16px;box-shadow:0 2px 10px #0f5c3a14}
+.climate{margin-top:-6px}
+.cl-top{display:flex;justify-content:space-between;align-items:center}
+.cl-top b{font-size:1.2rem;display:block}.cl-top span{color:var(--mut);font-size:.9rem}
+.big{font-size:44px}
+.stats{display:grid;grid-template-columns:1.6fr 1fr;gap:10px;margin-top:12px}
+.stats div{background:var(--g3);border-radius:14px;padding:10px}
+.stats b{display:block;font-size:.95rem}.stats span{font-size:.78rem;color:var(--mut)}
+
+/* crops */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 16px}
+.crop{position:relative;background:#fff;border:0;border-radius:20px;padding:14px;text-align:left;display:flex;flex-direction:column;gap:4px;box-shadow:0 2px 10px #0f5c3a14}
+.crop:active{transform:scale(.98)}
+.crop .em{font-size:34px;background:var(--g3);border-radius:14px;width:52px;height:52px;display:grid;place-items:center}
+.crop small{color:var(--mut);font-size:.78rem}
+.rank{position:absolute;top:12px;right:12px;background:var(--amber);color:#3a2800;font-weight:700;font-size:.75rem;border-radius:10px;padding:2px 8px}
+.credit{text-align:center;color:var(--g1);font-weight:600;margin:28px 16px 8px}
+
+/* forms */
+.form label{display:block;font-size:.85rem;color:var(--mut);margin-bottom:12px}
+.form h3{margin:0 0 12px}
+.form select,.form input{display:block;width:100%;margin-top:4px;padding:13px;border-radius:14px;border:1.5px solid #d3e0d7;background:#fff;color:var(--ink);font-size:1.05rem}
+.form select:focus,.form input:focus{outline:2px solid var(--amber);border-color:var(--amber)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.btn{width:100%;border:0;background:var(--g1);color:#fff;font-weight:600;padding:14px;border-radius:16px;font-size:1.05rem;margin-top:8px}
+.btn:active{background:var(--g2)}
+.result{background:linear-gradient(160deg,var(--g1),var(--g2));color:#fff}
+.result .muted,.result .small{color:#d6eadd}
+.num{font-size:2.3rem;font-weight:700;margin-top:4px}.num small{font-size:1rem;font-weight:500}
+.num2{color:#ffd98a;font-weight:600;font-size:1.2rem}
+
+/* my farm */
+.field .row b{display:block}
+.when{margin:12px 0 4px;background:var(--g3);border-radius:14px;padding:12px;font-weight:700;color:var(--g1)}
+.field.due .when{background:#fff1d6;color:#8a5a00}
+.del{background:none;border:0;font-size:22px;padding:6px}
+.empty{color:var(--mut);text-align:center}
+.about{text-align:center}.about p{margin-top:10px}.note{font-size:.85rem;color:var(--mut)}
+
+/* sheet */
+.sheet{position:fixed;inset:0;z-index:30;background:#0008;display:flex;align-items:flex-end}
+.sheet[hidden]{display:none}
+.panel{position:relative;background:#fff;width:100%;max-width:520px;margin:0 auto;border-radius:28px 28px 0 0;padding:24px 18px calc(24px + env(safe-area-inset-bottom,0px));max-height:88vh;overflow:auto}
+.x{position:absolute;top:14px;right:14px;border:0;background:var(--g3);width:38px;height:38px;border-radius:50%;font-size:16px}
+.em.xl{font-size:56px;background:var(--g3);border-radius:22px;width:88px;height:88px;display:grid;place-items:center;margin-bottom:10px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.facts div{background:var(--g3);border-radius:14px;padding:10px}
+.facts b{display:block;font-size:.95rem}.facts span{font-size:.78rem;color:var(--mut)}
+
+/* bottom nav */
+#nav{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));max-width:496px;margin:0 auto;z-index:20;background:#fff;border-radius:26px;box-shadow:0 6px 24px #0f5c3a2e;display:grid;grid-template-columns:repeat(4,1fr);padding:6px}
+#nav button{border:0;background:none;padding:8px 0;border-radius:20px;font-size:.75rem;color:var(--mut);display:flex;flex-direction:column;align-items:center;gap:2px}
+#nav button span{font-size:22px}
+#nav button.on{background:var(--g1);color:#fff}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
